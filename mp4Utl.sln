@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mp4Utl", "mp4Utl.csproj", "{8605AAC6-EE2F-45B1-B0D8-1FE27E73C7AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8605AAC6-EE2F-45B1-B0D8-1FE27E73C7AE}.Debug|x64.ActiveCfg = Debug|x64
+		{8605AAC6-EE2F-45B1-B0D8-1FE27E73C7AE}.Debug|x64.Build.0 = Debug|x64
+		{8605AAC6-EE2F-45B1-B0D8-1FE27E73C7AE}.Release|x64.ActiveCfg = Release|x64
+		{8605AAC6-EE2F-45B1-B0D8-1FE27E73C7AE}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F612604D-F325-46AF-AE6D-514C76A91F38}
+	EndGlobalSection
+EndGlobal
