@@ -61,6 +61,7 @@
                     -->
                 </MenuItem>
                 <MenuItem Header="GIF出力(アニメーション画像)"/>
+                <MenuItem Header="SUB出力(字幕ファイル)"/>
                 <MenuItem Header="カスタム設定出力" Click="MenuItem_Click"/>
                 <MenuItem Header="出力中断"/>
                 <Separator/>
@@ -116,7 +117,8 @@
                         <!--↑右上-->
                     </Grid.ColumnDefinitions>
                     <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" />
-                    <Canvas x:Name="再生ウィンドウ" Height="auto" Width="auto" ClipToBounds="True"> <!--左上-->
+                    <Canvas x:Name="再生ウィンドウ" Height="auto" Width="auto" ClipToBounds="True">
+                        <!--左上-->
                         
                         
                     </Canvas>
