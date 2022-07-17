@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <Platforms>x64</Platforms>
+    <BaseOutputPath>build</BaseOutputPath>
   </PropertyGroup>
 
 </Project>
