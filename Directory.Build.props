@@ -1,0 +1,7 @@
+<Project>
+  <PropertyGroup>
+    <MSBuildProjectExtensionsPath>./build/obj</MSBuildProjectExtensionsPath>
+    <IntermediateOutputPath>./build/obj/$(Platform)/$(Configuration)</IntermediateOutputPath>
+    <BaseIntermediateOutputPath>./build/obj/$(Configuration)</BaseIntermediateOutputPath>
+  </PropertyGroup>
+</Project>
