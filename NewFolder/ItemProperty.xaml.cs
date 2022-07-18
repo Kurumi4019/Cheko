@@ -12,21 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace mp4Utl.MainWindow
+namespace mp4Utl.メインウィンドウ
 {
     /// <summary>
-    /// カスタム設定出力.xaml の相互作用ロジック
+    /// ItemProperty.xaml の相互作用ロジック
     /// </summary>
-    public partial class カスタム設定出力 : Window
+    public partial class ItemProperty : Window
     {
-        public カスタム設定出力()
+        public ItemProperty()
         {
             InitializeComponent();
-        }
-
-        private void MenuItem_Click(object sender, RoutedEventArgs e) //右下｢キャンセル｣をクリックしたときの動作
-        {
-            this.Close();
         }
     }
 }
