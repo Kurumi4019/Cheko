@@ -1,7 +1,7 @@
 Set-Location $PSScriptRoot
 
 $selfContained = Read-Host "publish as self contained? [y/n] (default value:n)"
-if (($selfContained -eq "y") -or ($selfContained -eq "Y")) {
+if (("$selfContained" -eq "y") -or ("$selfContained" -eq "Y")) {
     dotnet publish -c Debug -r win-x64 --self-contained
 } else {
     dotnet publish -c Debug -r win-x64 --no-self-contained
@@ -15,7 +15,7 @@ if (Test-Path "$batch_path/build/mp4Utl_Debug.7z" -PathType Leaf) {
     $delFile = Read-Host "Delete Duplicated 7z? [y/n] (default:n)"
     Write-Output $delFile
 
-    if (($delFile -eq "y") -or ($delFile -eq "Y")) {
+    if (("$delFile" -eq "y") -or ("$delFile" -eq "Y")) {
         Remove-Item "$batch_path/build/mp4Utl_Debug.7z"
     } else {
         exit
