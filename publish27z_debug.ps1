@@ -1,7 +1,7 @@
 Set-Location $PSScriptRoot
 
-$compLevel = Read-Host "publish as self contained? [y/n] (default value:n)"
-if (($delFile -eq "y") -or ($delFile -eq "Y")) {
+$selfContained = Read-Host "publish as self contained? [y/n] (default value:n)"
+if (($selfContained -eq "y") -or ($selfContained -eq "Y")) {
     dotnet publish -c Debug -r win-x64 --self-contained
 } else {
     dotnet publish -c Debug -r win-x64 --no-self-contained
