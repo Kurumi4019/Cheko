@@ -1,0 +1,92 @@
+﻿<Window x:Class="mp4Utl.NewFolder.PreviewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mp4Utl.NewFolder"
+        mc:Ignorable="d"
+        Title="mp4Utl[再生ウィンドウ]" Height="768" Width="1366">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <!--メニューバー編集開始-->
+            <MenuItem Header="ファイル(_F)">
+                <MenuItem Header="プロジェクトを新規作成"/>
+                <MenuItem Header="プロジェクトを開く"/>
+                <!--拡張子はおそらく.tdlpになるかと思われます-->
+                <MenuItem Header="プロジェクトを上書き保存"/>
+                <MenuItem Header="プロジェクトに名前を付けて保存"/>
+                <Separator/>
+                <!--セパレーターの表示,以下略-->
+                <MenuItem Header="MP4出力(動画ファイル)"/>
+                <!--
+                FFmpegで
+                -y -f rawvideo -s (任意動画サイズ 例:1920x1080) -pix_fmt nv12 -r (任意FPS 例: 60/1) -i "-" -i "\\.\pipe\Aviutl00004334_AuoAudioPipe0" -c:a aac -b:a 256k -c:v libx264 -preset slow -crf 20 "任意ディレクトリ 例:C:\Users\User\Desktop\hoge.mp4""
+                ってしとけばいいんじゃないですかね(テキトー)
+                     
+                ↑FFmpegOutのコマンドラインからコピペしたとはいえない バグったら適宜書き換える感じで
+                ↑ディレクトリの指定時""囲むの忘れないようにね
+                    
+                    X264コーデックで音声は｢明らかに劣化してね？｣と言われない程度には残す
+                -->
+                <MenuItem Header="MKV出力(透過あり動画ファイル)"/>
+                <!--MKVにすることにしました-->
+                <MenuItem Header="WAV出力(音声ファイル)"/>
+                <!--
+                    FFmpegのコマンドがわかりません
+                    -->
+                <MenuItem Header="PNG出力(現在のフレーム)">
+                    <MenuItem Header="透過あり"/>
+                    <!--コマンド知るか()-->
+                    <MenuItem Header="透過なし"/>
+                </MenuItem>
+                <MenuItem Header="PNG出力(連番)">
+                    <MenuItem Header="透過あり"/>
+                    <!--
+                    AviUtl + FFmpegOut曰く
+                    -y -f rawvideo -s (解像度) -pix_fmt bgra -r (FPS) -i "-" -c:v png　(ディレクトリ)
+                    でいけそう？知らんけど
+                    
+                    例
+                    -y -f rawvideo -s 1280x720 -pix_fmt bgr24 -r 60/1 -i "-" -c:v png
+                    "C:\Users\Kurumi4019\Desktop\動画検証\ンアーッ\PNG連番(RGBA)_%06d.png"
+
+                    ↑ディレクトリ部分だけ改行してもよさそう
+                    -->
+                    <MenuItem Header="透過なし"/>
+                    <!--
+                    AviUtl + FFmpegOut曰く
+                    -y -f rawvideo -s (解像度) -pix_fmt bgr24 -r (FPS) -i "-" -c:v png (ディレクトリ)
+                    でいけそう？知らんけど
+                    -->
+                </MenuItem>
+                <MenuItem Header="GIF出力(アニメーション画像)"/>
+                <MenuItem Header="SUB出力(字幕ファイル)"/>
+                <MenuItem Header="カスタム設定出力"/>
+                <MenuItem Header="出力中断"/>
+                <Separator/>
+                <MenuItem Header="最近使ったファイル"/>
+                <Separator/>
+                <MenuItem Header="環境設定" Click="MenuItem_Click_Settings"/>
+                <Separator/>
+                <MenuItem Header="ソフトウェアの終了" Click="MenuItem_Click_Exit" />
+            </MenuItem>
+            <MenuItem Header="ヘルプ(_H)">
+                <MenuItem Header="GitHubへのリンク" Click="MenuItem_Click_GitHub"/>
+                <!--https://github.com/Kurumi4019/mp4Utl-->
+                <Separator/>
+                <MenuItem Header="バージョン情報" Click="MenuItem_Click_Version"/>
+                <!--いづれバージョン情報専用のXAMLを作りたいです-->
+                <MenuItem Header="ファイル情報"/>
+            </MenuItem>
+        </Menu> <!--メニューバー編集終了-->
+        <StatusBar Grid.Row="3"/>
+    </Grid>
+</Window>
+
+<!--FFmpegってIntelとNVidiaのハードウェアエンコードに対応してるってマジ？-->

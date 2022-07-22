@@ -1,0 +1,37 @@
+﻿<Window x:Class="mp4Utl.NewFolder.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mp4Utl.NewFolder"
+        mc:Ignorable="d"
+        Title="mp4Utl[設定ウィンドウ]" Height="450" Width="350" MinHeight="450" MinWidth="150">
+    <Grid>
+        <Grid.ColumnDefinitions> <!--左側(メニュー)と右側(設定項目)で分離-->
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ScrollViewer
+        Margin="0"
+        HorizontalScrollBarVisibility="Hidden"
+        VerticalScrollBarVisibility="Visible">
+            <TreeView>
+                <TreeViewItem Header="外観" IsSelected="True" MouseDoubleClick="TreeViewItem_MouseDoubleClick"/>
+                <TreeViewItem Header="UnTitled" IsSelected="False"/>
+            </TreeView>
+        </ScrollViewer>
+            <Grid Grid.Column="1"> <!--右側の設定-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+            <ScrollViewer
+                Margin="0"
+                HorizontalScrollBarVisibility="Hidden"
+                VerticalScrollBarVisibility="Visible">
+            </ScrollViewer>
+        </Grid>
+                
+        <Grid/>
+    </Grid>
+</Window>

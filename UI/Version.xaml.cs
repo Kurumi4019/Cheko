@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace mp4Utl.NewFolder
+namespace mp4Utl.UI
 {
     /// <summary>
-    /// PreviewWindow.xaml の相互作用ロジック
+    /// Version.xaml の相互作用ロジック
     /// </summary>
-    public partial class PreviewWindow : Window
+    public partial class Version : Window
     {
-        public PreviewWindow()
+        public Version()
         {
             InitializeComponent();
         }

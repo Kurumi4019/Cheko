@@ -11,4 +11,8 @@
     <UseWindowsForms>True</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="DynamicAero2" Version="1.2.1" />
+  </ItemGroup>
+
 </Project>
