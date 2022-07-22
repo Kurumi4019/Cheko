@@ -12,17 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace mp4Utl.メインウィンドウ
+namespace mp4Utl.NewFolder
 {
     /// <summary>
-    /// SaiseiWindow.xaml の相互作用ロジック
+    /// Timeline.xaml の相互作用ロジック
     /// </summary>
-    public partial class SaiseiWindow : Window
+    public partial class Timeline : Window
     {
-        public SaiseiWindow()
+        public Timeline()
         {
             InitializeComponent();
         }
-
     }
 }
