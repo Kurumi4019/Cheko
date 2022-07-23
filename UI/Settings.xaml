@@ -18,28 +18,11 @@
                 <RowDefinition Height="20"/>
                 <RowDefinition Height="20"/>
                 <RowDefinition Height="20"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="20"/>
             </Grid.RowDefinitions>
             <Label Content="【外観】" VerticalAlignment="Center" FontWeight="Normal" FontFamily="Yu Gothic UI Semibold" Margin="0,-4,0,0"/>
+            
             <Label Content="ダークテーマの設定" VerticalAlignment="Center" FontWeight="Normal" FontFamily="Yu Gothic UI Semibold" Margin="0,-4,0,0" Grid.Row="1"/>
-            <ListBox Grid.Column="1" Grid.Row="2" d:ItemsSource="{d:SampleData ItemCount=5}" VerticalAlignment="Center" FontWeight="Normal" FontFamily="Yu Gothic UI Semibold" Margin="0,-4,0,0"/>
+            <Button Grid.Column="1" Grid.Row="1" Content="クリックして変更" Click="Button_Click_Theme"/>
         </Grid>
     </ScrollViewer>
 </Window>
