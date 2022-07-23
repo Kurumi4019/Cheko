@@ -5,33 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:mp4Utl.NewFolder"
         mc:Ignorable="d"
-        Title="mp4Utl[設定ウィンドウ]" Height="450" Width="350" MinHeight="450" MinWidth="150">
-    <Grid>
-        <Grid.ColumnDefinitions> <!--左側(メニュー)と右側(設定項目)で分離-->
-            <ColumnDefinition Width="0.5*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <ScrollViewer
-        Margin="0"
-        HorizontalScrollBarVisibility="Hidden"
-        VerticalScrollBarVisibility="Visible">
-            <TreeView>
-                <TreeViewItem Header="外観" IsSelected="True" MouseDoubleClick="TreeViewItem_MouseDoubleClick"/>
-                <TreeViewItem Header="UnTitled" IsSelected="False"/>
-            </TreeView>
-        </ScrollViewer>
-            <Grid Grid.Column="1"> <!--右側の設定-->
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-            <ScrollViewer
-                Margin="0"
-                HorizontalScrollBarVisibility="Hidden"
-                VerticalScrollBarVisibility="Visible">
-            </ScrollViewer>
+        Title="mp4Utl[設定ウィンドウ]" Height="450" Width="488" MinHeight="450" MinWidth="150">
+    <ScrollViewer>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <!--縦幅-->
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <!--横幅-->
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <Label Content="【外観】" VerticalAlignment="Center" FontWeight="Normal" FontFamily="Yu Gothic UI Semibold" Margin="0,-4,0,0"/>
+            <Label Content="ダークテーマの設定" VerticalAlignment="Center" FontWeight="Normal" FontFamily="Yu Gothic UI Semibold" Margin="0,-4,0,0" Grid.Row="1"/>
+            <ListBox Grid.Column="1" Grid.Row="2" d:ItemsSource="{d:SampleData ItemCount=5}" VerticalAlignment="Center" FontWeight="Normal" FontFamily="Yu Gothic UI Semibold" Margin="0,-4,0,0"/>
         </Grid>
-                
-        <Grid/>
-    </Grid>
+    </ScrollViewer>
 </Window>
