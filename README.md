@@ -5,7 +5,7 @@
 
 
 # 実行環境 #
-windows10 64bit版以降/¥
+windows10 64bit版以降
 
 32bitでは動きません
 
