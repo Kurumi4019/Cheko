@@ -19,10 +19,15 @@
                 <RowDefinition Height="20"/>
                 <RowDefinition Height="20"/>
             </Grid.RowDefinitions>
-            <Label Content="【外観】" VerticalAlignment="Center" FontWeight="Normal" FontFamily="Yu Gothic UI Semibold" Margin="0,-4,0,0"/>
+            <Label Content="【外観】" VerticalAlignment="Center" FontWeight="Bold" Margin="0,-4,0,0"/>
             
-            <Label Content="ダークテーマの設定" VerticalAlignment="Center" FontWeight="Normal" FontFamily="Yu Gothic UI Semibold" Margin="0,-4,0,0" Grid.Row="1"/>
-            <Button Grid.Column="1" Grid.Row="1" Content="クリックして変更" Click="Button_Click_Theme"/>
+            <Label Content="テーマの設定" VerticalAlignment="Center" FontWeight="Bold" Margin="0,-4,0,0" Grid.Row="1"/>
+            <ComboBox Grid.Column="1" Grid.Row="1" x:Name="Theme" SelectionChanged="Theme_SelectionChanged">
+                <ComboBoxItem Content="ライト" IsSelected="False" Name="Light"/>
+                <ComboBoxItem Content="ダーク(規定)" IsSelected="True" Name="Dark"/>
+                <ComboBoxItem Content="ブラック" IsSelected="False" Name="Black"/>
+            </ComboBox>
+
         </Grid>
     </ScrollViewer>
 </Window>

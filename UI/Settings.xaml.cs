@@ -28,18 +28,26 @@ namespace mp4Utl.NewFolder
             InitializeComponent();
         }
 
-        private void Button_Click_Theme(object sender, RoutedEventArgs e)
+        private void Theme_SelectionChanged(object sender, SelectionChangedEventArgs e) //テーマの設定
         {
             var theme = Application.Current.Resources.MergedDictionaries[0] as DynamicAero2.Theme;
             if (theme is null) return;
-
-            theme.Color = theme.Color switch
+            theme.Color = theme.Color;
             {
-                ThemeColor.NormalColor => ThemeColor.Black,
-                ThemeColor.Black => ThemeColor.Dark,
-                ThemeColor.Dark => ThemeColor.Light,
-                _ => ThemeColor.NormalColor
-            };
+
+                if (Theme.SelectedIndex == 0) //ライトを選択したとき
+                {
+                    ThemeColor.Light;
+                }
+                else if (Theme.SelectedIndex == 1) //ダーク(規定)を選択したとき
+                {
+                    ThemeColor.Dark;
+                }
+                else //ブラックを選択したとき
+                {
+                    ThemeColor.Black;
+                }
+            }
         }
     }
 }
