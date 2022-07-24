@@ -8,41 +8,82 @@
         Title="mp4Utl[アイテムプロパティ]" Height="450" Width="310">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="15"/>
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+        <ScrollBar Grid.Column="9"/>
+        <Grid Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <!--1列目↓-->
+            <Button ToolTip="カメラ制御の対象"/>
+            <Button Grid.Column="1" ToolTip="上のアイテムにクリッピング"/>
+            <Button Grid.Column="2" ToolTip="アイテム(中間点)の左端(左隣)に移動"/>
+            <Slider Grid.Column="3" Grid.ColumnSpan="3" VerticalAlignment="Center" ToolTip="アイテムの長さ(仮置き)"/>
+            <Button Grid.Column="6" ToolTip="アイテム(中間点)の右端(右隣)に移動"/>
+            <Button ToolTip="編集モード切り替え" Grid.Column="7"/>
+            <Button Grid.Column="8" ToolTip="エフェクトの追加"/>
+
+            <!--2列目-->
+            <Slider Grid.Row="1" VerticalAlignment="Center" ToolTip="移動前(X)" Grid.ColumnSpan="2"/>
+            <Grid Grid.Column="2" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button ToolTip="左へ" Content="←"/>
+                <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
+            </Grid>
+            <Label Grid.Column="3" Grid.Row="1" Content="Label" VerticalAlignment="Center"/>
+            <Button Grid.Column="4" Content="X" Grid.Row="1"/>
+            <Label Grid.Column="5" Grid.Row="1" Content="Label" VerticalAlignment="Center"/>
+            <Grid Grid.Column="6" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button ToolTip="左へ" Content="←"/>
+                <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
+
+            </Grid>
+            <Slider Grid.Row="1" VerticalAlignment="Center" ToolTip="移動前(X)" Grid.ColumnSpan="2" Grid.Column="7"/>
+        </Grid>
     </Grid>
 </Window>

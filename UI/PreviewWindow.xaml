@@ -76,6 +76,12 @@
                 <Separator/>
                 <MenuItem Header="ソフトウェアの終了" Click="MenuItem_Click_Exit" />
             </MenuItem>
+            
+
+            <MenuItem Header="表示(_V)">
+                <MenuItem Header="アイテムプロパティの表示" Click="MenuItem_Click_ItemProperty"/>
+            </MenuItem>
+
             <MenuItem Header="ヘルプ(_H)">
                 <MenuItem Header="GitHubへのリンク" Click="MenuItem_Click_GitHub"/>
                 <!--https://github.com/Kurumi4019/mp4Utl-->

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using mp4Utl.メインウィンドウ;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -58,6 +59,14 @@ namespace mp4Utl.NewFolder
         {
             var win = new Settings();
             win.Show();
+        }
+
+        private void MenuItem_Click_ItemProperty(object sender, RoutedEventArgs e)
+        {
+            {
+                var win = new ItemProperty();
+                win.Show();
+            }
         }
     }
 }
