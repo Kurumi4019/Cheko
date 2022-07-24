@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:mp4Utl.メインウィンドウ"
         mc:Ignorable="d"
-        Title="mp4Utl[アイテムプロパティ]" Height="450" Width="400" MinWidth="400">
+        Title="mp4Utl[アイテムプロパティ]" Height="450" Width="480" MinWidth="480" WindowStyle="ToolWindow">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -53,36 +53,16 @@
                 <RowDefinition Height="20"/>
             </Grid.RowDefinitions>
             <!--1列目↓-->
-            <Button ToolTip="カメラ制御の対象"/>
-            <Button Grid.Column="1" ToolTip="上のアイテムにクリッピング"/>
-            <Button Grid.Column="2" ToolTip="アイテム(中間点)の左端(左隣)に移動"/>
-            <Slider Grid.Column="3" Grid.ColumnSpan="3" VerticalAlignment="Center" ToolTip="アイテムの長さ(仮置き)"/>
-            <Button Grid.Column="6" ToolTip="アイテム(中間点)の右端(右隣)に移動"/>
-            <Button ToolTip="編集モード切り替え" Grid.Column="7"/>
-            <Button Grid.Column="8" ToolTip="エフェクトの追加"/>
+            <Label Content="動画ファイル" Grid.ColumnSpan="2" Margin="0,-4,0,0" FontWeight="Bold"/>
 
-            <!--2列目-->
-            <Slider Grid.Row="1" VerticalAlignment="Center" ToolTip="移動前" Grid.ColumnSpan="2"/>
-            <Grid Grid.Column="2" Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Button ToolTip="左へ" Content="←"/>
-                <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
-            </Grid>
-            <Label Grid.Column="3" Grid.Row="1" Content="Label" VerticalAlignment="Center"/>
-            <Button Grid.Column="4" Content="X" Grid.Row="1"/>
-            <Label Grid.Column="5" Grid.Row="1" Content="Label" VerticalAlignment="Center"/>
-            <Grid Grid.Column="6" Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Button ToolTip="左へ" Content="←"/>
-                <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
-            </Grid>
-            <Slider Grid.Row="1" VerticalAlignment="Center" ToolTip="移動後" Grid.ColumnSpan="2" Grid.Column="7"/>
+            <!--2列目↓-->
+            <Button Grid.Row="1" ToolTip="カメラ制御の対象"/>
+            <Button Grid.Row="1" Grid.Column="1" ToolTip="上のアイテムにクリッピング"/>
+            <Button Grid.Row="1" Grid.Column="2" ToolTip="アイテム(中間点)の左端(左隣)に移動"/>
+            <Slider Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="3" VerticalAlignment="Center" ToolTip="アイテムの長さ(仮置き)"/>
+            <Button Grid.Row="1" Grid.Column="6" ToolTip="アイテム(中間点)の右端(右隣)に移動"/>
+            <Button Grid.Row="1" ToolTip="編集モード切り替え" Grid.Column="7"/>
+            <Button Grid.Row="1" Grid.Column="8" ToolTip="エフェクトの追加" Click="Button_Click_AddEffect"/>
 
             <!--3列目-->
             <Slider Grid.Row="2" VerticalAlignment="Center" ToolTip="移動前" Grid.ColumnSpan="2"/>
@@ -95,7 +75,7 @@
                 <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
             </Grid>
             <Label Grid.Column="3" Grid.Row="2" Content="Label" VerticalAlignment="Center"/>
-            <Button Grid.Column="4" Content="Y" Grid.Row="2"/>
+            <Button Grid.Column="4" Content="X" Grid.Row="2"/>
             <Label Grid.Column="5" Grid.Row="2" Content="Label" VerticalAlignment="Center"/>
             <Grid Grid.Column="6" Grid.Row="2">
                 <Grid.ColumnDefinitions>
@@ -103,7 +83,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Button ToolTip="左へ" Content="←"/>
-                <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
+                <Button Grid.Column="2" ToolTip="右へ" Content="→"/>
             </Grid>
             <Slider Grid.Row="2" VerticalAlignment="Center" ToolTip="移動後" Grid.ColumnSpan="2" Grid.Column="7"/>
 
@@ -118,7 +98,7 @@
                 <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
             </Grid>
             <Label Grid.Column="3" Grid.Row="3" Content="Label" VerticalAlignment="Center"/>
-            <Button Grid.Column="4" Content="Z" Grid.Row="3"/>
+            <Button Grid.Column="4" Content="Y" Grid.Row="3"/>
             <Label Grid.Column="5" Grid.Row="3" Content="Label" VerticalAlignment="Center"/>
             <Grid Grid.Column="6" Grid.Row="3">
                 <Grid.ColumnDefinitions>
@@ -141,7 +121,7 @@
                 <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
             </Grid>
             <Label Grid.Column="3" Grid.Row="4" Content="Label" VerticalAlignment="Center"/>
-            <Button Grid.Column="4" Content="拡大率" Grid.Row="4"/>
+            <Button Grid.Column="4" Content="Z" Grid.Row="4"/>
             <Label Grid.Column="5" Grid.Row="4" Content="Label" VerticalAlignment="Center"/>
             <Grid Grid.Column="6" Grid.Row="4">
                 <Grid.ColumnDefinitions>
@@ -164,7 +144,7 @@
                 <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
             </Grid>
             <Label Grid.Column="3" Grid.Row="5" Content="Label" VerticalAlignment="Center"/>
-            <Button Grid.Column="4" Content="透明度" Grid.Row="5"/>
+            <Button Grid.Column="4" Content="拡大率" Grid.Row="5"/>
             <Label Grid.Column="5" Grid.Row="5" Content="Label" VerticalAlignment="Center"/>
             <Grid Grid.Column="6" Grid.Row="5">
                 <Grid.ColumnDefinitions>
@@ -176,7 +156,241 @@
             </Grid>
             <Slider Grid.Row="5" VerticalAlignment="Center" ToolTip="移動後" Grid.ColumnSpan="2" Grid.Column="7"/>
 
-            
+            <!--7列目-->
+            <Slider Grid.Row="6" VerticalAlignment="Center" ToolTip="移動前" Grid.ColumnSpan="2"/>
+            <Grid Grid.Column="2" Grid.Row="6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button ToolTip="左へ" Content="←"/>
+                <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
+            </Grid>
+            <Label Grid.Column="3" Grid.Row="6" Content="Label" VerticalAlignment="Center"/>
+            <Button Grid.Column="4" Content="透明度" Grid.Row="6"/>
+            <Label Grid.Column="5" Grid.Row="6" Content="Label" VerticalAlignment="Center"/>
+            <Grid Grid.Column="6" Grid.Row="6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button ToolTip="左へ" Content="←"/>
+                <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
+            </Grid>
+            <Slider Grid.Row="6" VerticalAlignment="Center" ToolTip="移動後" Grid.ColumnSpan="2" Grid.Column="7"/>
+
+            <!--8列目(動画のみ)-->
+            <Slider Grid.Row="7" VerticalAlignment="Center" ToolTip="移動前" Grid.ColumnSpan="2"/>
+            <Grid Grid.Column="2" Grid.Row="7">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button ToolTip="左へ" Content="←"/>
+                <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
+            </Grid>
+            <Label Grid.Column="3" Grid.Row="7" Content="Label" VerticalAlignment="Center"/>
+            <Button Grid.Column="4" Content="再生速度" Grid.Row="7"/>
+            <Label Grid.Column="5" Grid.Row="7" Content="Label" VerticalAlignment="Center"/>
+            <Grid Grid.Column="6" Grid.Row="7">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button ToolTip="左へ" Content="←"/>
+                <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
+            </Grid>
+            <Slider Grid.Row="7" VerticalAlignment="Center" ToolTip="移動後" Grid.ColumnSpan="2" Grid.Column="7"/>
+
+            <!--9列目(動画のみ)-->
+            <Slider Grid.Row="8" VerticalAlignment="Center" ToolTip="移動前" Grid.ColumnSpan="2"/>
+            <Grid Grid.Column="2" Grid.Row="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button ToolTip="左へ" Content="←"/>
+                <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
+            </Grid>
+            <Label Grid.Column="3" Grid.Row="8" Content="Label" VerticalAlignment="Center"/>
+            <Button Grid.Column="4" Content="再生位置" Grid.Row="8"/>
+            <Label Grid.Column="5" Grid.Row="8" Content="Label" VerticalAlignment="Center"/>
+            <Grid Grid.Column="6" Grid.Row="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button ToolTip="左へ" Content="←"/>
+                <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
+            </Grid>
+            <Slider Grid.Row="8" VerticalAlignment="Center" ToolTip="移動後" Grid.ColumnSpan="2" Grid.Column="7"/>
+
+            <!--10列目-->
+            <ComboBox Grid.ColumnSpan="2" Grid.Row="9" VerticalAlignment="Center">
+                <ComboBoxItem Content="通常" Selected="ComboBoxItem_Selected101" IsSelected="True"/>
+                <!--AviUtlデフォルト-->
+                <ComboBoxItem Content="加算" Selected="ComboBoxItem_Selected102"/>
+                <!--AviUtlデフォルト-->
+                <ComboBoxItem Content="加算(RED)" Selected="ComboBoxItem_Selected103"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="加算(GREEN)" Selected="ComboBoxItem_Selected104"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="加算(BLUE)" Selected="ComboBoxItem_Selected105"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="加算(RED-GREEN)" Selected="ComboBoxItem_Selected106"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="加算(GREEN-BLUE)" Selected="ComboBoxItem_Selected107"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="加算(BLUE-RED)" Selected="ComboBoxItem_Selected108"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="加算(unsigned)" Selected="ComboBoxItem_Selected109"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="減算" Selected="ComboBoxItem_Selected110"/>
+                <!--AviUtlデフォルト-->
+                <ComboBoxItem Content="減算(unsigned)" Selected="ComboBoxItem_Selected111"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="乗算" Selected="ComboBoxItem_Selected112"/>
+                <!--AviUtlデフォルト-->
+                <ComboBoxItem Content="除算" Selected="ComboBoxItem_Selected113"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="スクリーン" Selected="ComboBoxItem_Selected114"/>
+                <!--AviUtlデフォルト-->
+                <ComboBoxItem Content="オーバーレイ" Selected="ComboBoxItem_Selected115"/>
+                <!--AviUtlデフォルト-->
+                <ComboBoxItem Content="オーバーレイ(GIMP)" Selected="ComboBoxItem_Selected116"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="比較(明)" Selected="ComboBoxItem_Selected117"/>
+                <!--AviUtlデフォルト-->
+                <ComboBoxItem Content="比較(暗)" Selected="ComboBoxItem_Selected118"/>
+                <!--AviUtlデフォルト-->
+                <ComboBoxItem Content="輝度" Selected="ComboBoxItem_Selected119"/>
+                <!--AviUtlデフォルト-->
+                <ComboBoxItem Content="色差" Selected="ComboBoxItem_Selected120"/>
+                <!--AviUtlデフォルト-->
+                <ComboBoxItem Content="陰影" Selected="ComboBoxItem_Selected121"/>
+                <!--AviUtlデフォルト-->
+                <ComboBoxItem Content="陰影(焼き込み(リニア))" Selected="ComboBoxItem_Selected122"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="明暗" Selected="ComboBoxItem_Selected123"/>
+                <!--AviUtlデフォルト-->
+                <ComboBoxItem Content="明暗(リニアライト)" Selected="ComboBoxItem_Selected124"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="明暗(逆)" Selected="ComboBoxItem_Selected125"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="差分" Selected="ComboBoxItem_Selected126"/>
+                <!--AviUtlデフォルト-->
+                <ComboBoxItem Content="除外" Selected="ComboBoxItem_Selected127"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="ネガ" Selected="ComboBoxItem_Selected128"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="反転" Selected="ComboBoxItem_Selected129"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="カラー比較(明)" Selected="ComboBoxItem_Selected130"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="カラー比較(暗)" Selected="ComboBoxItem_Selected131"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="覆い焼き(カラー)" Selected="ComboBoxItem_Selected132"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="覆い焼き(逆カラー)" Selected="ComboBoxItem_Selected133"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="覆い焼き(ソフト)" Selected="ComboBoxItem_Selected134"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="焼き込み(カラー)" Selected="ComboBoxItem_Selected135"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="焼き込み(逆カラー)" Selected="ComboBoxItem_Selected136"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="焼き込み(ソフト)" Selected="ComboBoxItem_Selected137"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="ハードライト" Selected="ComboBoxItem_Selected138"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="ソフトライト" Selected="ComboBoxItem_Selected139"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="ソフトライト(gimp)" Selected="ComboBoxItem_Selected140"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="ソフトライト(photoshop)" Selected="ComboBoxItem_Selected141"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="ビビッドライト" Selected="ComboBoxItem_Selected142"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="ビビッドライト(photoshop)" Selected="ComboBoxItem_Selected143"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="ピンライト" Selected="ComboBoxItem_Selected144"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="ピンライト(逆)" Selected="ComboBoxItem_Selected145"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="ピンライト(強)" Selected="ComboBoxItem_Selected146"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="ハードミックス" Selected="ComboBoxItem_Selected147"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="色相" Selected="ComboBoxItem_Selected148"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="色相(HSVL)" Selected="ComboBoxItem_Selected149"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="色相(δ)" Selected="ComboBoxItem_Selected150"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="カラー(明度)" Selected="ComboBoxItem_Selected151"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="カラー(輝度)" Selected="ComboBoxItem_Selected152"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="カラー(HSVL)" Selected="ComboBoxItem_Selected153"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="彩度(明度)" Selected="ComboBoxItem_Selected154"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="彩度(輝度)" Selected="ComboBoxItem_Selected155"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="彩度(HSVL)" Selected="ComboBoxItem_Selected156"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="明度" Selected="ComboBoxItem_Selected157"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="輝度" Selected="ComboBoxItem_Selected158"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="輝度(HSVL)" Selected="ComboBoxItem_Selected159"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="RED" Selected="ComboBoxItem_Selected160"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="GREEN" Selected="ComboBoxItem_Selected161"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="BLUE" Selected="ComboBoxItem_Selected162"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="YELLOW" Selected="ComboBoxItem_Selected163"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="AQUA" Selected="ComboBoxItem_Selected164"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="MAGENTA" Selected="ComboBoxItem_Selected165"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="相加平均" Selected="ComboBoxItem_Selected166"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="相乗平均" Selected="ComboBoxItem_Selected167"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="調和平均" Selected="ComboBoxItem_Selected168"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="反射" Selected="ComboBoxItem_Selected169"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="グロー" Selected="ComboBoxItem_Selected170"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="寒色" Selected="ComboBoxItem_Selected171"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="暖色" Selected="ComboBoxItem_Selected172"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="微粒取り出し" Selected="ComboBoxItem_Selected173"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="微粒結合" Selected="ComboBoxItem_Selected174"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="フェニックス" Selected="ComboBoxItem_Selected175"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="AND" Selected="ComboBoxItem_Selected176"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="OR" Selected="ComboBoxItem_Selected177"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="XOR" Selected="ComboBoxItem_Selected178"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="SHIFT" Selected="ComboBoxItem_Selected179"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="二値化" Selected="ComboBoxItem_Selected180"/>
+                <!--｢合成モード拡張｣にあるやつ-->
+                <ComboBoxItem Content="LUTファイル読み込み" Selected="ComboBox_Item_Selected181"/>
+                <!--cubeファイル対応させましょう-->
+            </ComboBox>
+            <Label Grid.Column="2" Grid.Row="9" Content="合成モード" Grid.ColumnSpan="2" Margin="0,-4,0,0" FontWeight="Bold" />
         </Grid>
     </Grid>
 </Window>
