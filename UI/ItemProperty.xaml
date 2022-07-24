@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:mp4Utl.メインウィンドウ"
         mc:Ignorable="d"
-        Title="mp4Utl[アイテムプロパティ]" Height="450" Width="310">
+        Title="mp4Utl[アイテムプロパティ]" Height="450" Width="400" MinWidth="400">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -62,7 +62,7 @@
             <Button Grid.Column="8" ToolTip="エフェクトの追加"/>
 
             <!--2列目-->
-            <Slider Grid.Row="1" VerticalAlignment="Center" ToolTip="移動前(X)" Grid.ColumnSpan="2"/>
+            <Slider Grid.Row="1" VerticalAlignment="Center" ToolTip="移動前" Grid.ColumnSpan="2"/>
             <Grid Grid.Column="2" Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -81,9 +81,102 @@
                 </Grid.ColumnDefinitions>
                 <Button ToolTip="左へ" Content="←"/>
                 <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
-
             </Grid>
-            <Slider Grid.Row="1" VerticalAlignment="Center" ToolTip="移動前(X)" Grid.ColumnSpan="2" Grid.Column="7"/>
+            <Slider Grid.Row="1" VerticalAlignment="Center" ToolTip="移動後" Grid.ColumnSpan="2" Grid.Column="7"/>
+
+            <!--3列目-->
+            <Slider Grid.Row="2" VerticalAlignment="Center" ToolTip="移動前" Grid.ColumnSpan="2"/>
+            <Grid Grid.Column="2" Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button ToolTip="左へ" Content="←"/>
+                <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
+            </Grid>
+            <Label Grid.Column="3" Grid.Row="2" Content="Label" VerticalAlignment="Center"/>
+            <Button Grid.Column="4" Content="Y" Grid.Row="2"/>
+            <Label Grid.Column="5" Grid.Row="2" Content="Label" VerticalAlignment="Center"/>
+            <Grid Grid.Column="6" Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button ToolTip="左へ" Content="←"/>
+                <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
+            </Grid>
+            <Slider Grid.Row="2" VerticalAlignment="Center" ToolTip="移動後" Grid.ColumnSpan="2" Grid.Column="7"/>
+
+            <!--4列目-->
+            <Slider Grid.Row="3" VerticalAlignment="Center" ToolTip="移動前" Grid.ColumnSpan="2"/>
+            <Grid Grid.Column="2" Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button ToolTip="左へ" Content="←"/>
+                <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
+            </Grid>
+            <Label Grid.Column="3" Grid.Row="3" Content="Label" VerticalAlignment="Center"/>
+            <Button Grid.Column="4" Content="Z" Grid.Row="3"/>
+            <Label Grid.Column="5" Grid.Row="3" Content="Label" VerticalAlignment="Center"/>
+            <Grid Grid.Column="6" Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button ToolTip="左へ" Content="←"/>
+                <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
+            </Grid>
+            <Slider Grid.Row="3" VerticalAlignment="Center" ToolTip="移動後" Grid.ColumnSpan="2" Grid.Column="7"/>
+
+            <!--5列目-->
+            <Slider Grid.Row="4" VerticalAlignment="Center" ToolTip="移動前" Grid.ColumnSpan="2"/>
+            <Grid Grid.Column="2" Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button ToolTip="左へ" Content="←"/>
+                <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
+            </Grid>
+            <Label Grid.Column="3" Grid.Row="4" Content="Label" VerticalAlignment="Center"/>
+            <Button Grid.Column="4" Content="拡大率" Grid.Row="4"/>
+            <Label Grid.Column="5" Grid.Row="4" Content="Label" VerticalAlignment="Center"/>
+            <Grid Grid.Column="6" Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button ToolTip="左へ" Content="←"/>
+                <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
+            </Grid>
+            <Slider Grid.Row="4" VerticalAlignment="Center" ToolTip="移動後" Grid.ColumnSpan="2" Grid.Column="7"/>
+
+            <!--6列目-->
+            <Slider Grid.Row="5" VerticalAlignment="Center" ToolTip="移動前" Grid.ColumnSpan="2"/>
+            <Grid Grid.Column="2" Grid.Row="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button ToolTip="左へ" Content="←"/>
+                <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
+            </Grid>
+            <Label Grid.Column="3" Grid.Row="5" Content="Label" VerticalAlignment="Center"/>
+            <Button Grid.Column="4" Content="透明度" Grid.Row="5"/>
+            <Label Grid.Column="5" Grid.Row="5" Content="Label" VerticalAlignment="Center"/>
+            <Grid Grid.Column="6" Grid.Row="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button ToolTip="左へ" Content="←"/>
+                <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
+            </Grid>
+            <Slider Grid.Row="5" VerticalAlignment="Center" ToolTip="移動後" Grid.ColumnSpan="2" Grid.Column="7"/>
+
+            
         </Grid>
     </Grid>
 </Window>
