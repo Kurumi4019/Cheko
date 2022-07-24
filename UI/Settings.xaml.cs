@@ -37,15 +37,15 @@ namespace mp4Utl.NewFolder
 
                 if (Theme.SelectedIndex == 0) //ライトを選択したとき
                 {
-                    ThemeColor.Light;
+                    ThemeColor light = ThemeColor.Light;
                 }
                 else if (Theme.SelectedIndex == 1) //ダーク(規定)を選択したとき
                 {
-                    ThemeColor.Dark;
+                    ThemeColor dark = ThemeColor.Dark;
                 }
                 else //ブラックを選択したとき
                 {
-                    ThemeColor.Black;
+                    ThemeColor Black = ThemeColor.Black;
                 }
             }
         }
