@@ -226,7 +226,7 @@
             <Slider Grid.Row="8" VerticalAlignment="Center" ToolTip="移動後" Grid.ColumnSpan="2" Grid.Column="7"/>
 
             <!--10列目-->
-            <ComboBox Grid.ColumnSpan="2" Grid.Row="9" VerticalAlignment="Center">
+            <ComboBox Grid.ColumnSpan="3" Grid.Row="9" VerticalAlignment="Center">
                 <ComboBoxItem Content="通常" Selected="ComboBoxItem_Selected101" IsSelected="True"/>
                 <!--AviUtlデフォルト-->
                 <ComboBoxItem Content="加算" Selected="ComboBoxItem_Selected102"/>
@@ -390,7 +390,10 @@
                 <ComboBoxItem Content="LUTファイル読み込み" Selected="ComboBox_Item_Selected181"/>
                 <!--cubeファイル対応させましょう-->
             </ComboBox>
-            <Label Grid.Column="2" Grid.Row="9" Content="合成モード" Grid.ColumnSpan="2" Margin="0,-4,0,0" FontWeight="Bold" />
+            <Label Grid.Column="3" Grid.Row="9" Content="合成モード" Grid.ColumnSpan="2" FontWeight="Bold" Margin="0,-4,0,0"/>
+
+            <!--11行目-->
+            <Button Content="参照ファイル" Grid.Row="10" VerticalAlignment="Center" Width="155" Grid.ColumnSpan="3" Click="Button_Click_reference"/>
         </Grid>
     </Grid>
 </Window>

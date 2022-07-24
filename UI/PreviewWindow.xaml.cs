@@ -68,5 +68,10 @@ namespace mp4Utl.NewFolder
                 win.Show();
             }
         }
+
+        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
     }
 }

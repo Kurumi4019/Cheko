@@ -76,7 +76,7 @@
                 <Separator/>
                 <MenuItem Header="ソフトウェアの終了" Click="MenuItem_Click_Exit" />
             </MenuItem>
-            
+
 
             <MenuItem Header="表示(_V)">
                 <MenuItem Header="アイテムプロパティの表示" Click="MenuItem_Click_ItemProperty"/>
@@ -90,7 +90,8 @@
                 <!--いづれバージョン情報専用のXAMLを作りたいです-->
                 <MenuItem Header="ファイル情報"/>
             </MenuItem>
-        </Menu> <!--メニューバー編集終了-->
+        </Menu>
+        <!--メニューバー編集終了-->
         <StatusBar Grid.Row="3"/>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
@@ -101,6 +102,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button Grid.Column="3" Content="再生 / 一時停止" ToolTip="再生 / 一時停止"/>
+            <Slider  VerticalAlignment="Center" Grid.Column="1" ValueChanged="Slider_ValueChanged" Grid.ColumnSpan="2"/>
         </Grid>
     </Grid>
 </Window>
