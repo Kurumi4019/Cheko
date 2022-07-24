@@ -24,7 +24,7 @@ namespace mp4Utl.NewFolder
         {
             InitializeComponent();
         }
-                //　MenuItem_Clickは実装順にやってますので視認性ちょっと悪いかもしれません。
+        //　MenuItem_Clickは実装順にやってますので視認性ちょっと悪いかもしれません。
         //　ご了承下さい。
 
         private void MenuItem_Click_Exit(object sender, RoutedEventArgs e)

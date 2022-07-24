@@ -1,11 +1,11 @@
-﻿<Window x:Class="mp4Utl.メインウィンドウ.ItemProperty"
+﻿<Window x:Class="mp4Utl.UI.ItemProperty.Video"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:mp4Utl.メインウィンドウ"
+        xmlns:local="clr-namespace:mp4Utl.UI.ItemProperty"
         mc:Ignorable="d"
-        Title="mp4Utl[アイテムプロパティ]" Height="450" Width="480" MinWidth="480" WindowStyle="ToolWindow">
+        Title="mp4Utl[アイテムプロパティ]" Height="450" Width="480" MinWidth="480" WindowStyle="ToolWindow" Topmost="True">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>

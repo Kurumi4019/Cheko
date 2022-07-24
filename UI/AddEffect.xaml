@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:mp4Utl.UI"
         mc:Ignorable="d"
-        Title="エフェクトの追加" Height="450" Width="800" WindowStyle="ToolWindow" ResizeMode="NoResize">
+        Title="エフェクトの追加" Height="450" Width="800" WindowStyle="ToolWindow" ResizeMode="NoResize" Topmost="True">
     <Grid>
         
     </Grid>

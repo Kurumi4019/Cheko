@@ -1,4 +1,5 @@
 ﻿using Amazon.S3.Model;
+using FFmpeg.AutoGen;
 using Microsoft.Win32;
 using mp4Utl.UI;
 using System;
@@ -15,14 +16,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace mp4Utl.メインウィンドウ
+namespace mp4Utl.UI.ItemProperty
 {
     /// <summary>
-    /// ItemProperty.xaml の相互作用ロジック
+    /// Video.xaml の相互作用ロジック
     /// </summary>
-    public partial class ItemProperty : Window
+    public partial class Video : Window
     {
-        public ItemProperty()
+        public Video()
         {
             InitializeComponent();
         }
@@ -33,8 +34,8 @@ namespace mp4Utl.メインウィンドウ
             win.Show();
         }
         private void ComboBoxItem_Selected101(object sender, RoutedEventArgs e)
-        { 
-            
+        {
+
         }
         private void ComboBoxItem_Selected102(object sender, RoutedEventArgs e)
         {
@@ -448,8 +449,7 @@ namespace mp4Utl.メインウィンドウ
             // ダイアログを表示する
             if (dialog.ShowDialog() == true)
             {
-                // 選択されたファイル名 (ファイルパス) をメッセージボックスに表示
-                MessageBox.Show(dialog.FileName);
+                ;
             }
         }
     }
