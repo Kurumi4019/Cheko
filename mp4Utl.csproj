@@ -23,6 +23,7 @@
   <ItemGroup>
     <PackageReference Include="AWSSDK.S3" Version="3.7.9.30" />
     <PackageReference Include="DynamicAero2" Version="1.2.1" />
+    <PackageReference Include="FFmpeg.AutoGen" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
