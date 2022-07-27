@@ -74,9 +74,9 @@
                 <Button ToolTip="左へ" Content="←"/>
                 <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
             </Grid>
-            <Label Grid.Column="3" Grid.Row="2" Content="Label" VerticalAlignment="Center"/>
+            <Label Margin="0,-4,0,0" Grid.Column="3" Grid.Row="2" Content="Label" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             <Button Grid.Column="4" Content="X" Grid.Row="2"/>
-            <Label Grid.Column="5" Grid.Row="2" Content="Label" VerticalAlignment="Center"/>
+            <Label Margin="0,-4,0,0" Grid.Column="5" Grid.Row="2" Content="Label" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             <Grid Grid.Column="6" Grid.Row="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -97,9 +97,9 @@
                 <Button ToolTip="左へ" Content="←"/>
                 <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
             </Grid>
-            <Label Grid.Column="3" Grid.Row="3" Content="Label" VerticalAlignment="Center"/>
+            <Label Margin="0,-4,0,0" Grid.Column="3" Grid.Row="3" Content="Label" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             <Button Grid.Column="4" Content="Y" Grid.Row="3"/>
-            <Label Grid.Column="5" Grid.Row="3" Content="Label" VerticalAlignment="Center"/>
+            <Label Margin="0,-4,0,0" Grid.Column="5" Grid.Row="3" Content="Label" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             <Grid Grid.Column="6" Grid.Row="3">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -120,9 +120,9 @@
                 <Button ToolTip="左へ" Content="←"/>
                 <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
             </Grid>
-            <Label Grid.Column="3" Grid.Row="4" Content="Label" VerticalAlignment="Center"/>
+            <Label Margin="0,-4,0,0" Grid.Column="3" Grid.Row="4" Content="Label" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             <Button Grid.Column="4" Content="Z" Grid.Row="4"/>
-            <Label Grid.Column="5" Grid.Row="4" Content="Label" VerticalAlignment="Center"/>
+            <Label Margin="0,-4,0,0" Grid.Column="5" Grid.Row="4" Content="Label" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             <Grid Grid.Column="6" Grid.Row="4">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -143,9 +143,9 @@
                 <Button ToolTip="左へ" Content="←"/>
                 <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
             </Grid>
-            <Label Grid.Column="3" Grid.Row="5" Content="Label" VerticalAlignment="Center"/>
+            <Label Margin="0,-4,0,0" Grid.Column="3" Grid.Row="5" Content="Label" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             <Button Grid.Column="4" Content="拡大率" Grid.Row="5"/>
-            <Label Grid.Column="5" Grid.Row="5" Content="Label" VerticalAlignment="Center"/>
+            <Label Margin="0,-4,0,0" Grid.Column="5" Grid.Row="5" Content="Label" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             <Grid Grid.Column="6" Grid.Row="5">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -166,9 +166,9 @@
                 <Button ToolTip="左へ" Content="←"/>
                 <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
             </Grid>
-            <Label Grid.Column="3" Grid.Row="6" Content="Label" VerticalAlignment="Center"/>
+            <Label Margin="0,-4,0,0" Grid.Column="3" Grid.Row="6" Content="Label" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             <Button Grid.Column="4" Content="透明度" Grid.Row="6"/>
-            <Label Grid.Column="5" Grid.Row="6" Content="Label" VerticalAlignment="Center"/>
+            <Label Margin="0,-4,0,0" Grid.Column="5" Grid.Row="6" Content="Label" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             <Grid Grid.Column="6" Grid.Row="6">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -189,9 +189,9 @@
                 <Button ToolTip="左へ" Content="←"/>
                 <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
             </Grid>
-            <Label Grid.Column="3" Grid.Row="7" Content="Label" VerticalAlignment="Center"/>
+            <Label Margin="0,-4,0,0" Grid.Column="3" Grid.Row="7" Content="Label" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             <Button Grid.Column="4" Content="再生速度" Grid.Row="7"/>
-            <Label Grid.Column="5" Grid.Row="7" Content="Label" VerticalAlignment="Center"/>
+            <Label Margin="0,-4,0,0" Grid.Column="5" Grid.Row="7" Content="Label" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
             <Grid Grid.Column="6" Grid.Row="7">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -212,9 +212,9 @@
                 <Button ToolTip="左へ" Content="←"/>
                 <Button Grid.Column="1" ToolTip="右へ" Content="→"/>
             </Grid>
-            <Label Grid.Column="3" Grid.Row="8" Content="Label" VerticalAlignment="Center"/>
+            <Label Margin="0,-4,0,0" Grid.Column="3" Grid.Row="8" Content="Label" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             <Button Grid.Column="4" Content="再生位置" Grid.Row="8"/>
-            <Label Grid.Column="5" Grid.Row="8" Content="Label" VerticalAlignment="Center"/>
+            <Label Margin="0,-4,0,0" Grid.Column="5" Grid.Row="8" Content="Label" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             <Grid Grid.Column="6" Grid.Row="8">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
