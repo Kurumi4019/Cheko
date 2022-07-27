@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 using mp4Utl.UI.ItemProperty;
-using FFmpeg.AutoGen
+using FFmpeg.AutoGen;
 
 namespace mp4Utl.NewFolder
 
