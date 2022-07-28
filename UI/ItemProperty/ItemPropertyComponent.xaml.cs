@@ -17,7 +17,7 @@ namespace mp4Utl.UI.ItemProperty {
     /// <summary>
     /// ItemPropertyElement.xaml の相互作用ロジック
     /// </summary>
-    public partial class ItemPropertyElement : UserControl {
+    public partial class ItemPropertyComponent : UserControl {
         /// <summary>
         /// 要素名
         /// </summary>
@@ -46,7 +46,7 @@ namespace mp4Utl.UI.ItemProperty {
         private int _minValue;
         private int _maxValue;
 
-        public ItemPropertyElement(string text, int min, int max) {
+        public ItemPropertyComponent(string text, int min, int max) {
             Text = text; 
             _minValue = min;
             _maxValue = max; 

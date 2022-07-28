@@ -52,13 +52,12 @@ namespace mp4Utl.NewFolder
 
     private void MenuItem_Click_ItemProperty(object sender, RoutedEventArgs e) //｢表示｣→｢アイテムプロパティの表示｣をクリックしたときの動作
     {
-        {
-            var win = new Video();
+            //var win = new Video();
+            var win = new TestProperty();
             win.Show();
-        }
     }
 
-    private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e) //シークバー
+        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e) //シークバー
     {
 
     }

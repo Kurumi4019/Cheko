@@ -27,11 +27,13 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="20"/>
                 <RowDefinition Height="20"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="20"/>
                 <RowDefinition Height="20"/>
                 <RowDefinition Height="20"/>
             </Grid.RowDefinitions>
-            <!--1列目↓-->
-            <Label Content="動画ファイル" Grid.ColumnSpan="2" Margin="0,-4,0,0" FontWeight="Bold"/>
+            <!--1列目 種別表示-->
+            <Label x:Name="ElementType_Label" Content="ElementType" Grid.ColumnSpan="2" Margin="0,-4,0,0" FontWeight="Bold"/>
 
             <!--2列目↓-->
             <Button Grid.Row="1" ToolTip="カメラ制御の対象"/>
@@ -41,13 +43,18 @@
             <Button Grid.Row="1" Grid.Column="6" ToolTip="アイテム(中間点)の右端(右隣)に移動"/>
             <Button Grid.Row="1" ToolTip="編集モード切り替え" Grid.Column="7"/>
             <Button Grid.Row="1" Grid.Column="8" ToolTip="エフェクトの追加" Click="Button_Click_AddEffect"/>
+            
+            <!--ここに編集要素-->
+            <Grid x:Name="Components_Grid" Grid.Row="2" Grid.ColumnSpan="9">
+                
+            </Grid>
+            
+            <!--4列目-->
+            <ComboBox Grid.ColumnSpan="3" Grid.Row="3" VerticalAlignment="Center"></ComboBox>
+            <Label Grid.Column="3" Grid.Row="3" Content="合成モード" Grid.ColumnSpan="2" FontWeight="Bold" Margin="0,-4,0,0"/>
 
-            <!--10列目-->
-            <ComboBox Grid.ColumnSpan="3" Grid.Row="2" VerticalAlignment="Center"></ComboBox>
-            <Label Grid.Column="3" Grid.Row="2" Content="合成モード" Grid.ColumnSpan="2" FontWeight="Bold" Margin="0,-4,0,0"/>
-
-            <!--11行目-->
-            <Button Content="参照ファイル" Grid.Row="3" VerticalAlignment="Center" Width="155" Grid.ColumnSpan="3"/>
+            <!--5行目-->
+            <Button Content="参照ファイル" Grid.Row="4" VerticalAlignment="Center" Width="155" Grid.ColumnSpan="3"/>
         </Grid>
     </Grid>
 </Window>
