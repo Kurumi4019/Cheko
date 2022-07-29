@@ -38,9 +38,9 @@
                 <Button x:Name="Decrease_Before" ToolTip="左へ" Content="←"/>
                 <Button x:Name="Increase_Before" Grid.Column="1" ToolTip="右へ" Content="→"/>
             </Grid>
-            <Label Margin="0,-4,0,0" Grid.Column="3" Grid.Row="0" Content="Label" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label x:Name="ValueLabel_Before" Margin="0,-4,0,0" Grid.Column="3" Grid.Row="0" Content="Label" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             <Button x:Name="ElementButton" Grid.Column="4" Content="Text" Grid.Row="0"/>
-            <Label Margin="0,-4,0,0" Grid.Column="5" Grid.Row="0" Content="Label" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label x:Name="ValueLabel_After" Margin="0,-4,0,0" Grid.Column="5" Grid.Row="0" Content="Label" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             <Grid Grid.Column="6" Grid.Row="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>

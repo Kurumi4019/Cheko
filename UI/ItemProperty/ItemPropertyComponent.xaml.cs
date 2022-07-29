@@ -58,6 +58,8 @@ namespace mp4Utl.UI.ItemProperty {
             Decrease_After.Click += Decrease_After_Click;
             Increase_Before.Click += Increase_Before_Click;
             Increase_After.Click += Increase_After_Click;
+            Slider_Before.ValueChanged += Slider_Before_ValueChanged;
+            Slider_After.ValueChanged += Slider_After_ValueChanged;
 
             // 値の設定
             ElementButton.Content = Text;
@@ -65,7 +67,20 @@ namespace mp4Utl.UI.ItemProperty {
             Slider_After.Minimum = _minValue;
             Slider_Before.Maximum = _maxValue;
             Slider_After.Maximum = _maxValue;
+            Decrease_After.IsEnabled = false;
+            Increase_After.IsEnabled = false;
+            Slider_After.IsEnabled = false;
+            ValueLabel_Before.Content = Math.Round(Slider_Before.Value, 2).ToString();
+            ValueLabel_After.Content = Math.Round(Slider_After.Value, 2).ToString();
 
+        }
+
+        private void Slider_After_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e) {
+            ValueLabel_After.Content = Math.Round(Slider_After.Value, 2).ToString();
+        }
+
+        private void Slider_Before_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e) {
+            ValueLabel_Before.Content = Math.Round(Slider_Before.Value, 2).ToString();
         }
 
         private void Toggle_Movable(bool val) {
@@ -100,11 +115,11 @@ namespace mp4Utl.UI.ItemProperty {
         /// 移動前の値を取得します
         /// </summary>
         /// <returns>移動前の値</returns>
-        public double GetValue_Before() => Slider_Before.Value;
+        public double GetValue_Before() => Math.Round(Slider_Before.Value, 2);
         /// <summary>
         /// 移動後の値を取得します
         /// </summary>
         /// <returns>移動後の値</returns>
-        public double GetValue_After() => Slider_After.Value;
+        public double GetValue_After() => Math.Round(Slider_After.Value, 2);
     }
 }
