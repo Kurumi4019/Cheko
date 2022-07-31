@@ -50,7 +50,7 @@
             </Grid>
             
             <!--4列目-->
-            <ComboBox Grid.ColumnSpan="3" Grid.Row="3" VerticalAlignment="Center"></ComboBox>
+            <ComboBox x:Name="BlendingMode_ComboBox" Grid.ColumnSpan="3" Grid.Row="3" VerticalAlignment="Center"></ComboBox>
             <Label Grid.Column="3" Grid.Row="3" Content="合成モード" Grid.ColumnSpan="2" FontWeight="Bold" Margin="0,-4,0,0"/>
 
             <!--5行目-->
