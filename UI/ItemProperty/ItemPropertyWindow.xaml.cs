@@ -19,7 +19,7 @@ namespace mp4Utl.UI.ItemProperty {
     /// </summary>
     public abstract partial class ItemPropertyWindow : Window {
         public abstract string ElementType { get; }
-        public abstract List<ItemPropertyComponent> Components { get; }
+        public abstract List<ItemPropertyComponent> DefalutComponents { get; }
         public ItemPropertyWindow() {
             InitializeComponent();
             SetComponents();
@@ -28,16 +28,28 @@ namespace mp4Utl.UI.ItemProperty {
         }
 
         private void SetComponents() {
-            for (int i = 0; i < Components.Count; i++) {
-                var c = Components[i];
+            DefalutComponents.ForEach(c => AddComponent(c));
+        }
 
-                Debug.WriteLine(c.ActualHeight);
-                Components_Grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(20, GridUnitType.Pixel) });
-                Components_Grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(480, GridUnitType.Pixel) });
-                c.SetValue(Grid.RowProperty, i);
-                c.SetValue(VerticalAlignmentProperty, VerticalAlignment.Center);
-                Components_Grid.Children.Add(c);
+        public void AddComponent(ItemPropertyComponent component) {
+            component.SetValue(Grid.RowProperty, Components_Grid.RowDefinitions.Count);
+            component.SetValue(VerticalAlignmentProperty, VerticalAlignment.Center);
+            Components_Grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(20, GridUnitType.Pixel) });
+            Components_Grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(480, GridUnitType.Pixel) });           
+            Components_Grid.Children.Add(component);
+        }
+
+        public void DeleteComponent(string text) {
+            for (int i = 0; i < Components_Grid.Children.Count; i++) {
+                var c = Components_Grid.Children[i];
+                if (c is ItemPropertyComponent) {
+                    if ((c as ItemPropertyComponent).Text == text) {
+                        Components_Grid.RowDefinitions.RemoveAt(i);                      
+                        return;
+                    }
+                }
             }
+            throw new InvalidOperationException();
         }
         
         private void Button_Click_AddEffect(object sender, RoutedEventArgs e) {

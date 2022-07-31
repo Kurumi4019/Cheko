@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace mp4Utl.UI.ItemProperty {
     internal class TestProperty : ItemPropertyWindow {
         public override string ElementType => "ほげ";
-        public override List<ItemPropertyComponent> Components { get {
+        public override List<ItemPropertyComponent> DefalutComponents { get {
                 var l = new List<ItemPropertyComponent>();
                 l.Add(new ItemPropertyComponent("拡大率", 0, 100));
                 l.Add(new ItemPropertyComponent("神率", -100, 100));
@@ -16,6 +16,8 @@ namespace mp4Utl.UI.ItemProperty {
             } 
         }
 
-        public TestProperty() : base() { }
+        public TestProperty() : base() {
+            DeleteComponent("拡大率");
+        }
     }
 }
