@@ -26,10 +26,6 @@ namespace mp4Utl.UI.ItemProperty {
         /// デフォルトで表示されるコンポーネント
         /// </summary>
         public abstract List<ItemPropertyComponent> DefaultComponents { get; }
-        /// <summary>
-        /// 合成モードに追加するオプション
-        /// </summary>
-        public string[] AdditionalBlendingModes { get; set; }
 
         public ItemPropertyWindow() {
             InitializeComponent();
@@ -37,8 +33,8 @@ namespace mp4Utl.UI.ItemProperty {
 
             // 合成モードコンボボックスの初期値設定
             var defaultBlendingModes = new string[] { "通常", "加算(RED)", "加算(GREEN)", "加算(BLUE)", "加算(RED-GREEN)", "加算(GREEN-BLUE)", "加算(BLUE-RED)", "加算(unsigned)", "減算", "減算(unsigned)", "乗算", "除算", "スクリーン", "オーバーレイ", "オーバーレイ(GIMP)", "比較(明)", "比較(暗)", "輝度", "色差", "陰影", "陰影(焼きこみ(リニア))", "明暗", "明暗(リニアライト)", "明暗(逆)", "差分", "除外", "ネガ", "反転", "カラー比較(明)" }; // 途中で力尽きた
-            var blendingModes = defaultBlendingModes.Concat(AdditionalBlendingModes).ToList();
-            blendingModes.ForEach(x => BlendingMode_ComboBox.Items.Add(x));
+            defaultBlendingModes.ToList().ForEach(x => BlendingMode_ComboBox.Items.Add(x));
+            BlendingMode_ComboBox.Text = defaultBlendingModes[0];
 
             ElementType_Label.Content = ElementType;
         }
@@ -60,6 +56,12 @@ namespace mp4Utl.UI.ItemProperty {
         /// <param name="componentName">値を得たいコンポーネントの名前</param>
         /// <returns>取得した値</returns>
         public double GetValue_After(string componentName) => GetComponentByName(componentName).GetValue_After();
+
+        /// <summary>
+        /// 指定した名前のコンポーネントが移動可能かどうかを切り替えます
+        /// </summary>
+        /// <param name="componentName">切り替えたいコンポーネントの名前</param>
+        public void ToggleMovable(string componentName) => GetComponentByName(componentName).IsMovable = !GetComponentByName(componentName).IsMovable;
 
         /// <summary>
         /// 現在選択されている合成モードを取得します
@@ -96,7 +98,7 @@ namespace mp4Utl.UI.ItemProperty {
             }
             throw new InvalidOperationException();
         }
-        
+
         private void Button_Click_AddEffect(object sender, RoutedEventArgs e) {
             var win = new AddEffect();
             win.Show();
