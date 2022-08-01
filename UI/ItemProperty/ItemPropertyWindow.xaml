@@ -1,0 +1,60 @@
+﻿<Window x:Class="mp4Utl.UI.ItemProperty.ItemPropertyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mp4Utl.UI.ItemProperty"
+        mc:Ignorable="d"
+        Title="mp4Utl[アイテムプロパティ]" Height="450" Width="480" MinWidth="480" WindowStyle="ToolWindow" Topmost="True">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="15"/>
+        </Grid.ColumnDefinitions>
+        <ScrollBar Grid.Column="9"/>
+        <Grid Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <!--1列目 種別表示-->
+            <Label x:Name="ElementType_Label" Content="ElementType" Grid.ColumnSpan="2" Margin="0,-4,0,0" FontWeight="Bold"/>
+
+            <!--2列目↓-->
+            <Button Grid.Row="1" ToolTip="カメラ制御の対象"/>
+            <Button Grid.Row="1" Grid.Column="1" ToolTip="上のアイテムにクリッピング"/>
+            <Button Grid.Row="1" Grid.Column="2" ToolTip="アイテム(中間点)の左端(左隣)に移動"/>
+            <Slider Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="3" VerticalAlignment="Center" ToolTip="アイテムの長さ(仮置き)"/>
+            <Button Grid.Row="1" Grid.Column="6" ToolTip="アイテム(中間点)の右端(右隣)に移動"/>
+            <Button Grid.Row="1" ToolTip="編集モード切り替え" Grid.Column="7"/>
+            <Button Grid.Row="1" Grid.Column="8" ToolTip="エフェクトの追加" Click="Button_Click_AddEffect"/>
+            
+            <!--ここに編集要素-->
+            <Grid x:Name="Components_Grid" Grid.Row="2" Grid.ColumnSpan="9">
+                
+            </Grid>
+            
+            <!--4列目-->
+            <ComboBox x:Name="BlendingMode_ComboBox" Grid.ColumnSpan="3" Grid.Row="3" VerticalAlignment="Center"></ComboBox>
+            <Label Grid.Column="3" Grid.Row="3" Content="合成モード" Grid.ColumnSpan="2" FontWeight="Bold" Margin="0,-4,0,0"/>
+
+            <!--5行目-->
+            <Button Content="参照ファイル" Grid.Row="4" VerticalAlignment="Center" Width="155" Grid.ColumnSpan="3"/>
+        </Grid>
+    </Grid>
+</Window>
