@@ -41,7 +41,20 @@
             <Button Grid.Row="1" Grid.Column="2" ToolTip="アイテム(中間点)の左端(左隣)に移動"/>
             <Slider Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="3" VerticalAlignment="Center" ToolTip="アイテムの長さ(仮置き)"/>
             <Button Grid.Row="1" Grid.Column="6" ToolTip="アイテム(中間点)の右端(右隣)に移動"/>
-            <Button Grid.Row="1" ToolTip="編集モード切り替え" Grid.Column="7"/>
+            <ToggleButton Grid.Row="1" ToolTip="編集モード切り替え" Grid.Column="7" Loaded="ToggleButton_Loaded">
+                <ToggleButton.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="動画ファイル"/>
+                        <MenuItem Header="画像ファイル"/>
+                        <MenuItem Header="テキスト"/>
+                        <MenuItem Header="図形"/>
+                        <MenuItem Header="フレームバッファ(画面の複製)"/>
+                        <MenuItem Header="音声波形表示"/>
+                        <MenuItem Header="シーン"/>
+                        <MenuItem Header="カスタムオブジェクト"/>
+                    </ContextMenu>
+                </ToggleButton.ContextMenu>
+            </ToggleButton>
             <Button Grid.Row="1" Grid.Column="8" ToolTip="エフェクトの追加" Click="Button_Click_AddEffect"/>
             
             <!--ここに編集要素-->
@@ -54,7 +67,7 @@
             <Label Grid.Column="3" Grid.Row="3" Content="合成モード" Grid.ColumnSpan="2" FontWeight="Bold" Margin="0,-4,0,0"/>
 
             <!--5行目-->
-            <Button Content="参照ファイル" Grid.Row="4" VerticalAlignment="Center" Width="155" Grid.ColumnSpan="3"/>
+            <Button Content="参照ファイル" Grid.Row="4" VerticalAlignment="Center" Grid.ColumnSpan="3"/>
         </Grid>
     </Grid>
 </Window>

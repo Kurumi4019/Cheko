@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -102,6 +103,15 @@ namespace mp4Utl.UI.ItemProperty {
         private void Button_Click_AddEffect(object sender, RoutedEventArgs e) {
             var win = new AddEffect();
             win.Show();
+        }
+
+        private void ToggleButton_Loaded(object sender, RoutedEventArgs e) //Grid.Column="7" Grid.Row="1"
+        {
+            var btn = (ToggleButton)sender;
+
+            btn.SetBinding(ToggleButton.IsCheckedProperty, new Binding("IsOpen") { Source = btn.ContextMenu });
+            btn.ContextMenu.PlacementTarget = btn;
+            btn.ContextMenu.Placement = PlacementMode.Bottom;
         }
     }
 }
